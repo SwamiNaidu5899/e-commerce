@@ -24,6 +24,8 @@ function Header({ cartItems, wishlistItems }) {
               <FaShoppingCart size={20} />
               <Badge bg="danger" className="ms-1">{cartItems.length}</Badge>
             </Nav.Link>
+            <Nav.Link href="/signin">LogIn</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,112 +1,111 @@
-/* Ensure that the carousel images cover the entire area */
 .carousel .slide img {
     width: 100%;
-    height: 500px; /* Set a default height */
-    object-fit: cover; /* Maintain aspect ratio, filling the container */
+    height: 500px;
+    object-fit: cover; 
   }
   
   @media (max-width: 768px) {
-    /* Reduce the height for smaller devices like tablets */
     .carousel .slide img {
       height: 350px;
     }
   }
   
   @media (max-width: 480px) {
-    /* Further reduce the height for mobile devices */
     .carousel .slide img {
       height: 250px;
     }
   }
   
-  /* Style the legend to make it more visible and responsive */
   .carousel .legend {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); 
     color: white;
     font-size: 1.2rem;
     padding: 10px;
     border-radius: 5px;
     position: absolute;
-    bottom: 20px; /* Position the text near the bottom */
+    bottom: 20px; 
     left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    max-width: 80%; /* Keep the text width within a reasonable limit */
+    transform: translateX(-50%);
+    max-width: 80%; 
     text-align: center;
   }
   
-  /* Adjust legend font size on smaller devices */
   @media (max-width: 768px) {
     .carousel .legend {
-      font-size: 1rem; /* Slightly smaller text for tablets */
+      font-size: 1rem;
     }
   }
   
   @media (max-width: 480px) {
     .carousel .legend {
-      font-size: 0.9rem; /* Smaller text for mobile devices */
+      font-size: 0.9rem; 
     }
   }
   
 
 
   /* Product Carousel */
-
-
-  /* styles.css */
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
-    background-color: #fff;
-  }
-  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto; 
+  max-height: 180px;
+  object-fit: cover; 
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: yellow; 
+  color: black; 
+  border: none;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.btn:hover {
+  background-color: black; 
+  color: yellow; 
+}
+
+@media (max-width: 768px) {
   .card-img-top {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+      max-height: 150px; 
   }
-  
-  .card-body {
-    padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .card-img-top {
+      max-height: 120px;
   }
-  
-  .card-title {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .btn {
-    margin-top: 10px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-  
-  @media (max-width: 768px) {
-    .card-img-top {
-      height: 150px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card-img-top {
-      height: 120px;
-    }
-  }
+}
 
   
   /* Cartwishlist */
-
-
-  /* styles.css */
 .cart-item, .wishlist-item {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -134,7 +133,6 @@
   
   /* //Shop.css */
 
-  /* General container styling for the Shop page */
 .shop-container {
   padding: 20px;
   max-width: 1200px;
@@ -150,7 +148,6 @@
   letter-spacing: 1px;
 }
 
-/* Grid styling for product cards */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +156,6 @@
   align-items: stretch;
 }
 
-/* Styling for individual product cards */
 .card {
   border: none;
   background-color: #f8f9fa;
@@ -189,7 +185,6 @@
   text-align: center;
 }
 
-/* Styling for product title and price */
 .card-title {
   font-size: 1.2rem;
   color: #333;
@@ -202,7 +197,6 @@
   margin: 10px 0;
 }
 
-/* Styling for the buttons with hover effects */
 .btn-primary {
   background-color: #007bff;
   border: none;
@@ -232,8 +226,6 @@
   color: white;
   transform: scale(1.05);
 }
-
-/* Media query for mobile responsiveness */
 @media (max-width: 576px) {
   .card {
     margin-bottom: 15px;
@@ -246,7 +238,6 @@
 
 /* Footer.css */
 
-/* Footer general styling */
 .footer {
   background-color: #333;
   color: #fff;
@@ -380,53 +371,53 @@
 
 .about-container {
   padding: 40px 20px;
-  max-width: 1200px; /* Maximum width for larger screens */
-  margin: 0 auto; /* Center the container */
+  max-width: 1200px; 
+  margin: 0 auto;
   text-align: center;
 }
 
 .about-container h2 {
-  font-size: 2rem; /* Title font size */
-  margin-bottom: 30px; /* Spacing below the title */
-  color: #333; /* Color for title */
+  font-size: 2rem; 
+  margin-bottom: 30px;
+  color: #333; 
 }
 
 .advantages-container {
-  display: grid; /* Using grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between cards */
-  padding: 0 10px; /* Responsive padding */
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 0 10px; 
 }
 
 .advantage-item {
-  border: 1px solid #eaeaea; /* Light border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside each card */
-  background-color: #f9f9f9; /* Light background color */
-  transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
-  text-align: center; /* Center text */
+  border: 1px solid #eaeaea; 
+  border-radius: 10px; 
+  padding: 20px;
+  background-color: #f9f9f9; 
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .advantage-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .advantage-icon {
-  font-size: 3rem; /* Icon size */
-  color: #007bff; /* Icon color */
-  margin-bottom: 10px; /* Space below icon */
+  font-size: 3rem; 
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
 .advantage-item h3 {
-  font-size: 1.5rem; /* Heading font size */
-  margin: 10px 0; /* Vertical margin for heading */
-  color: #333; /* Color for heading */
+  font-size: 1.5rem; 
+  margin: 10px 0; 
+  color: #333; 
 }
 
 .advantage-item p {
-  font-size: 1rem; /* Paragraph font size */
-  color: #555; /* Color for paragraph text */
+  font-size: 1rem;
+  color: #555; 
 }
 
 
@@ -434,15 +425,15 @@
 
 .feedback-container {
   padding: 40px 20px;
-  max-width: 1200px; /* Maximum width for larger screens */
-  margin: 0 auto; /* Center the container */
-  text-align: center; /* Center text */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  text-align: center; 
 }
 
 .feedback-container h2 {
-  font-size: 2rem; /* Title font size */
-  margin-bottom: 30px; /* Spacing below the title */
-  color: #333; /* Color for title */
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .feedback-card {
@@ -470,4 +461,144 @@
 
 .rating {
   display: flex;
+}
+
+
+/* brands */
+
+.top-brands-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.brand-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+
+.brand-logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Signin css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f5f5f5, #eaeaea);
+  padding: 20px;
+}
+
+.login-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  width: 70%; 
+  max-width: 450px;
+  margin: 20px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* Login button styling */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+      flex-direction: column;
+  }
+
+  .login-image {
+      display: none; 
+  }
+
+  .login-form {
+      width: 90%; 
+      max-width: 100%;
+      padding: 30px;
+      box-shadow: none; 
+  }
 }

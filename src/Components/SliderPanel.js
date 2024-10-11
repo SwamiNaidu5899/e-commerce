@@ -24,7 +24,6 @@ function CartWishlistPanel({
         <FaHeart />
       </button>
 
-      {/* Cart Sliding Panel */}
       <SlidingPane
         isOpen={cartPaneOpen}
         title="Your Cart"
@@ -51,7 +50,6 @@ function CartWishlistPanel({
         )}
       </SlidingPane>
 
-      {/* Wishlist Sliding Panel */}
       <SlidingPane
         isOpen={wishlistPaneOpen}
         title="Your Wishlist"

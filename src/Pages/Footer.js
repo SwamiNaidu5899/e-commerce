@@ -5,7 +5,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Customer Service Section */}
         <div className="footer-section">
           <h4>Customer Service</h4>
           <ul>
@@ -16,7 +15,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Information Section */}
         <div className="footer-section">
           <h4>Information</h4>
           <ul>
@@ -27,7 +25,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Follow Us Section */}
         <div className="footer-section">
           <h4>Follow Us</h4>
           <ul className="social-links">
@@ -38,7 +35,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact Us Section */}
         <div className="footer-section">
           <h4>Contact Us</h4>
           <ul>
