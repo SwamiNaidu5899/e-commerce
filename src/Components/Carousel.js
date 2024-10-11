@@ -18,16 +18,16 @@ function Banner() {
       dynamicHeight={true}
     >
       <div>
-        <img src="https://via.placeholder.com/1200x400/FF5733/FFFFFF?text=Slide+1" alt="Slide 1" />
+        <img src="https://cmsimages.shoppersstop.com/Levis_web_06cf940456/Levis_web_06cf940456.png" alt="Slide 1" />
       </div>
       <div>
-        <img src="https://via.placeholder.com/1200x400/33C3FF/FFFFFF?text=Slide+2" alt="Slide 2" />
+        <img src="https://cmsimages.shoppersstop.com/ck_web_f65e1b50f9/ck_web_f65e1b50f9.png" alt="Slide 2" />
       </div>
       <div>
-        <img src="https://via.placeholder.com/1200x400/FFC300/FFFFFF?text=Slide+3" alt="Slide 3" />
+        <img src="https://cmsimages.shoppersstop.com/Allen_solly_web_9690f52612/Allen_solly_web_9690f52612.png" alt="Slide 3" />
       </div>
       <div>
-        <img src="https://via.placeholder.com/1200x400/DAF7A6/000000?text=Slide+4" alt="Slide 4" />
+        <img src="https://cmsimages.shoppersstop.com/uspa_web_4caab3c9ad/uspa_web_4caab3c9ad.png" alt="Slide 4" />
       </div>
     </Carousel>
   );

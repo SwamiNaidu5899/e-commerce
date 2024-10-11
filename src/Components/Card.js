@@ -23,17 +23,19 @@ const responsive = {
 };
 
 const products = [
-  { id: 1, name: 'Product 1', image: 'https://via.placeholder.com/300x200', price: '$10' },
-  { id: 2, name: 'Product 2', image: 'https://via.placeholder.com/300x200', price: '$15' },
-  { id: 3, name: 'Product 3', image: 'https://via.placeholder.com/300x200', price: '$20' },
-  { id: 4, name: 'Product 4', image: 'https://via.placeholder.com/300x200', price: '$25' },
-  { id: 5, name: 'Product 5', image: 'https://via.placeholder.com/300x200', price: '$30' },
-  { id: 6, name: 'Product 6', image: 'https://via.placeholder.com/300x200', price: '$35' },
+  { id: 1, name: 'Product 1', image: 'https://cmsimages.shoppersstop.com/Puma_web_1b1c883931/Puma_web_1b1c883931.png', price: '$10' },
+  { id: 2, name: 'Product 2', image: 'https://cmsimages.shoppersstop.com/spykar_web_e2b18aaea5/spykar_web_e2b18aaea5.png', price: '$15' },
+  { id: 3, name: 'Product 3', image: 'https://cmsimages.shoppersstop.com/VH_web_9715c8a2e4/VH_web_9715c8a2e4.png', price: '$20' },
+  { id: 4, name: 'Product 4', image: 'https://cmsimages.shoppersstop.com/flying_machine_web_3a25f45e79/flying_machine_web_3a25f45e79.png', price: '$25' },
+  { id: 5, name: 'Product 5', image: 'https://cmsimages.shoppersstop.com/pepe_web_9961d5c4d5/pepe_web_9961d5c4d5.png', price: '$30' },
+  { id: 6, name: 'Product 6', image: 'https://cmsimages.shoppersstop.com/Crimsoune_Club_web_9c0568d921/Crimsoune_Club_web_9c0568d921.png', price: '$35' },
 ];
 
 function ProductCarousel({ addToCart, addToWishlist }) {
   return (
-    <Carousel
+        <div>
+          <h2 style={{textAlign:'center'}}>Best Selling Products</h2>
+            <Carousel
       responsive={responsive}
       infinite
       autoPlay
@@ -62,6 +64,7 @@ function ProductCarousel({ addToCart, addToWishlist }) {
         </div>
       ))}
     </Carousel>
+        </div>
   );
 }
 

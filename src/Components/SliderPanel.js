@@ -18,10 +18,10 @@ function CartWishlistPanel({
   return (
     <div>
       <button className="btn btn-primary" onClick={() => setCartPaneOpen(true)}>
-        <FaShoppingCart /> View Cart
+        <FaShoppingCart />
       </button>
       <button className="btn btn-outline-secondary ms-2" onClick={() => setWishlistPaneOpen(true)}>
-        <FaHeart /> View Wishlist
+        <FaHeart />
       </button>
 
       {/* Cart Sliding Panel */}

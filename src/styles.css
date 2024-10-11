@@ -373,3 +373,101 @@
     font-size: 16px;
   }
 }
+
+
+/* ourAdvantages */
+
+
+.about-container {
+  padding: 40px 20px;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2rem; /* Title font size */
+  margin-bottom: 30px; /* Spacing below the title */
+  color: #333; /* Color for title */
+}
+
+.advantages-container {
+  display: grid; /* Using grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 0 10px; /* Responsive padding */
+}
+
+.advantage-item {
+  border: 1px solid #eaeaea; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside each card */
+  background-color: #f9f9f9; /* Light background color */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+  text-align: center; /* Center text */
+}
+
+.advantage-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.advantage-icon {
+  font-size: 3rem; /* Icon size */
+  color: #007bff; /* Icon color */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+.advantage-item h3 {
+  font-size: 1.5rem; /* Heading font size */
+  margin: 10px 0; /* Vertical margin for heading */
+  color: #333; /* Color for heading */
+}
+
+.advantage-item p {
+  font-size: 1rem; /* Paragraph font size */
+  color: #555; /* Color for paragraph text */
+}
+
+
+/* feedback.css */
+
+.feedback-container {
+  padding: 40px 20px;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center text */
+}
+
+.feedback-container h2 {
+  font-size: 2rem; /* Title font size */
+  margin-bottom: 30px; /* Spacing below the title */
+  color: #333; /* Color for title */
+}
+
+.feedback-card {
+  border: 1px solid #eaeaea; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s;
+}
+
+.feedback-card:hover {
+  transform: scale(1.05); 
+}
+
+
+.feedback-text {
+  font-size: 1rem;
+  color: #555; 
+  margin: 15px 0; 
+}
+
+.rating {
+  display: flex;
+}

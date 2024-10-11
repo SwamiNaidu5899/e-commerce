@@ -9,6 +9,9 @@ import Shop from './Pages/Shop';
 import './styles.css'
 import Footer from './Pages/Footer';
 import AboutUs from './Pages/AboutUs';
+import OurAdvantages from './Components/OurAdvantages';
+import Feedback from './Components/Feedback';
+import Offers from './Components/Offers';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -42,8 +45,8 @@ function App() {
         decreaseQuantity={(id) => setCartItems(cartItems.map((item) => item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item))}
       /> */}
       <Routes>
-        <Route path="/" element={<><Banner/><ProductCarousel/></>} />
-        <Route
+        <Route path="/" element={<><Banner/><Offers/><ProductCarousel/> <OurAdvantages/><Feedback/></>} />
+        <Route   
           path="/shop"
           element={<Shop addToCart={addToCart} addToWishlist={addToWishlist} />}
         />
