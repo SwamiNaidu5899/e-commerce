@@ -1,0 +1,375 @@
+/* Ensure that the carousel images cover the entire area */
+.carousel .slide img {
+    width: 100%;
+    height: 500px; /* Set a default height */
+    object-fit: cover; /* Maintain aspect ratio, filling the container */
+  }
+  
+  @media (max-width: 768px) {
+    /* Reduce the height for smaller devices like tablets */
+    .carousel .slide img {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further reduce the height for mobile devices */
+    .carousel .slide img {
+      height: 250px;
+    }
+  }
+  
+  /* Style the legend to make it more visible and responsive */
+  .carousel .legend {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px; /* Position the text near the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    max-width: 80%; /* Keep the text width within a reasonable limit */
+    text-align: center;
+  }
+  
+  /* Adjust legend font size on smaller devices */
+  @media (max-width: 768px) {
+    .carousel .legend {
+      font-size: 1rem; /* Slightly smaller text for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel .legend {
+      font-size: 0.9rem; /* Smaller text for mobile devices */
+    }
+  }
+  
+
+
+  /* Product Carousel */
+
+
+  /* styles.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-img-top {
+      height: 120px;
+    }
+  }
+
+  
+  /* Cartwishlist */
+
+
+  /* styles.css */
+.cart-item, .wishlist-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-item h5, .wishlist-item h5 {
+      font-size: 1rem;
+    }
+  }
+
+  
+  /* //Shop.css */
+
+  /* General container styling for the Shop page */
+.shop-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Grid styling for product cards */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* Styling for individual product cards */
+.card {
+  border: none;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Styling for product title and price */
+.card-title {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #777;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Styling for the buttons with hover effects */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 15px;
+  }
+
+  .shop-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer.css */
+
+/* Footer general styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 15px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f8f9fa;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 10px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-section li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Social links styling */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #bbb;
+  font-size: 0.8rem;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+}
+
+
+/* Aboutus.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  color: #555;
+  margin-top: 20px;
+}
+
+.about-container p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .about-container h1 {
+    font-size: 24px;
+  }
+
+  .about-container h2 {
+    font-size: 20px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+}
