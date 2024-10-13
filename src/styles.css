@@ -176,7 +176,7 @@
 .card-img-top {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
   border-bottom: 2px solid #ddd;
 }
 
@@ -198,7 +198,7 @@
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #14202e;
   border: none;
   padding: 10px 15px;
   font-size: 0.9rem;
@@ -235,6 +235,86 @@
     font-size: 1.5rem;
   }
 }
+
+
+/* Card */
+.product-carousel-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin: 10px;
+}
+
+.product-carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Carousel Image Styling */
+.product-carousel-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Product Carousel Body Styling */
+.product-carousel-body {
+  padding: 15px;
+}
+
+.product-carousel-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-carousel-price {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Primary Button Styling */
+.product-carousel-btn-primary {
+  background-color: black;
+  color: yellow;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.product-carousel-btn-primary:hover {
+  background-color: black;
+  color: yellow;
+  transform: scale(1.05);
+}
+
+/* Secondary Button Styling */
+.product-carousel-btn-secondary {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.product-carousel-btn-secondary:hover {
+  background-color: black;
+  color: yellow;
+  transform: scale(1.05);
+}
+
+
+
 
 /* Footer.css */
 
@@ -323,45 +403,61 @@
 
 /* Aboutus.css */
 
+/* Container styles */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+/* Heading styles */
 .about-container h1 {
-  text-align: center;
-  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
   margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .about-container h2 {
-  color: #555;
-  margin-top: 20px;
-}
-
-.about-container p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 30px;
   margin-bottom: 15px;
-  color: #666;
 }
 
-@media (max-width: 600px) {
+/* Paragraph styles */
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .about-container {
-    padding: 15px;
+      padding: 15px;
   }
 
   .about-container h1 {
-    font-size: 24px;
+      font-size: 2rem;
   }
 
   .about-container h2 {
-    font-size: 20px;
+      font-size: 1.5rem;
   }
 
   .about-container p {
-    font-size: 16px;
+      font-size: 1rem;
   }
 }
 
@@ -501,104 +597,93 @@
 }
 
 /* Signin css */
-
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #f5f5f5, #eaeaea);
-  padding: 20px;
-}
-
-.login-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc);
+  padding: 2rem;
 }
 
 .login-form {
-  flex: 1;
-  background-color: #fff;
-  padding: 40px;
+  background-color: #ffffff;
+  padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  width: 70%; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   max-width: 450px;
-  margin: 20px;
+  width: 100%;
 }
 
 .login-form h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
   color: #555;
-  margin-bottom: 8px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
 .form-group input:focus {
-  border-color: #333;
+  border-color: #007bff;
   outline: none;
 }
 
-/* Login button styling */
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
 .btn-login {
+  display: block;
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-login:hover {
-  background-color: #555;
+  background-color: #0056b3;
+}
+.account-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .login-container {
-      flex-direction: column;
-  }
+.link-button {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .login-image {
-      display: none; 
-  }
-
-  .login-form {
-      width: 90%; 
-      max-width: 100%;
-      padding: 30px;
-      box-shadow: none; 
-  }
+.link-button:hover {
+  text-decoration: underline;
 }

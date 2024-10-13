@@ -75,4 +75,3 @@ function CartWishlistPanel({
 }
 
 export default CartWishlistPanel;
- 

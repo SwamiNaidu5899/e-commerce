@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import '../styles.css';
 
 const responsive = {
   superLargeDesktop: {
@@ -33,38 +32,38 @@ const products = [
 
 function ProductCarousel({ addToCart, addToWishlist }) {
   return (
-        <div>
-          <h2 style={{textAlign:'center'}}>Best Selling Products</h2>
-            <Carousel
-      responsive={responsive}
-      infinite
-      autoPlay
-      autoPlaySpeed={3000}
-      transitionDuration={500}
-    >
-      {products.map((product) => (
-        <div className="card" key={product.id}>
-          <img src={product.image} alt={product.name} className="card-img-top" />
-          <div className="card-body">
-            <h5 className="card-title">{product.name}</h5>
-            <p className="card-text">{product.price}</p>
-            <button
-              className="btn btn-primary"
-              onClick={() => addToCart(product)}
-            >
-              Add to Cart
-            </button>
-            <button
-              className="btn btn-outline-secondary ms-2"
-              onClick={() => addToWishlist(product)}
-            >
-              Add to Wishlist
-            </button>
+    <div>
+      <h2 style={{ textAlign: 'center' }}>Best Selling Products</h2>
+      <Carousel
+        responsive={responsive}
+        infinite
+        autoPlay
+        autoPlaySpeed={3000}
+        transitionDuration={500}
+      >
+        {products.map((product) => (
+          <div className="product-carousel-card" key={product.id}>
+            <img src={product.image} alt={product.name} className="product-carousel-img" />
+            <div className="product-carousel-body">
+              <h5 className="product-carousel-title">{product.name}</h5>
+              <p className="product-carousel-price">{product.price}</p>
+              <button
+                className="product-carousel-btn-primary"
+                onClick={() => addToCart(product)}
+              >
+                Add to Cart
+              </button>
+              <button
+                className="product-carousel-btn-secondary"
+                onClick={() => addToWishlist(product)}
+              >
+                Add to Wishlist
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
-    </Carousel>
-        </div>
+        ))}
+      </Carousel>
+    </div>
   );
 }
 
