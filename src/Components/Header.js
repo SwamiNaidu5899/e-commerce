@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Navbar, Nav, Container, Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaHeart, FaTrashAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaHeart, FaTrashAlt, FaSignInAlt } from 'react-icons/fa';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import '../styles.css';
+import { CartContext } from './CartContext'; 
 
-function Header({
-  cartItems,
-  wishlistItems,
-  removeFromCart,
-  removeFromWishlist,
-  increaseQuantity,
-  decreaseQuantity,
-}) {
+function Header() {
+  const {
+    cartItems = [],
+    wishlistItems = [],
+    removeFromCart,
+    removeFromWishlist,
+    increaseQuantity,
+    decreaseQuantity,
+  } = useContext(CartContext);
+
   const [cartPaneOpen, setCartPaneOpen] = useState(false);
   const [wishlistPaneOpen, setWishlistPaneOpen] = useState(false);
 
@@ -31,13 +34,21 @@ function Header({
             <Nav className="ml-auto">
               <Nav.Link onClick={() => setWishlistPaneOpen(true)}>
                 <FaHeart size={20} />
-                <Badge bg="danger" className="ms-1">{wishlistItems.length}</Badge>
+                <Badge bg="danger" className="ms-1">
+                  {wishlistItems.length}
+                </Badge>
               </Nav.Link>
+
               <Nav.Link onClick={() => setCartPaneOpen(true)}>
                 <FaShoppingCart size={20} />
-                <Badge bg="danger" className="ms-1">{cartItems.length}</Badge>
+                <Badge bg="danger" className="ms-1">
+                  {cartItems.length}
+                </Badge>
               </Nav.Link>
-              <Nav.Link href="/signin">LogIn</Nav.Link>
+
+              <Nav.Link href="/signin">
+              <FaSignInAlt size={20} />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -88,6 +99,9 @@ function Header({
             </div>
           ))
         )}
+      </SlidingPane>
+      <SlidingPane>
+
       </SlidingPane>
     </>
   );
