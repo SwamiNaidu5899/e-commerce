@@ -14,13 +14,15 @@ function Header() {
     removeFromWishlist,
     increaseQuantity,
     decreaseQuantity,
-  } = useContext(CartContext);
+    addToCart
+    } = useContext(CartContext);
 
   const [cartPaneOpen, setCartPaneOpen] = useState(false);
   const [wishlistPaneOpen, setWishlistPaneOpen] = useState(false);
 
   return (
-    <>
+    <div>
+     {/* <div style={{position:'fixed', zIndex:'50', width:'100%'}}> */}
       <Navbar bg="light" expand="lg" className="shadow-sm p-3 mb-5 bg-white rounded">
         <Container>
           <Navbar.Brand href="/">YourBrand</Navbar.Brand>
@@ -67,6 +69,7 @@ function Header() {
             <div key={item.id} className="cart-item">
               <h5>{item.name}</h5>
               <p>{item.price}</p>
+              <img src={item.image} alt={item.name} height={80}/>
               <div className="quantity-controls">
                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
                 <span>{item.quantity}</span>
@@ -93,17 +96,18 @@ function Header() {
             <div key={item.id} className="wishlist-item">
               <h5>{item.name}</h5>
               <p>{item.price}</p>
+              <img src={item.image} alt={item.name} height={80}/>
               <button className="btn btn-danger" onClick={() => removeFromWishlist(item.id)}>
                 <FaTrashAlt /> Remove
+              </button>
+              <button className="btn btn-success" onClick={() => addToCart(item.id)}>
+                <FaShoppingCart /> AddToCart
               </button>
             </div>
           ))
         )}
       </SlidingPane>
-      <SlidingPane>
-
-      </SlidingPane>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,6 @@
 import React, { createContext, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
@@ -10,33 +12,35 @@ export const CartProvider = ({ children }) => {
     const isAlreadyInCart = cartItems.some((item) => item.id === product.id);
     if (!isAlreadyInCart) {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
-      alert('Item is added!')
+      toast.success('Product added to cart!');
     } else {
       setCartItems(
         cartItems.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         )
       );
-      alert('Item is already in cart!')
+      toast.info('Product quantity updated in cart!');
     }
   };
 
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
-    alert('Do you want to remove!!')
-
+    toast.error('Product removed from cart!');
   };
 
   const addToWishlist = (product) => {
     const isAlreadyInWishlist = wishlistItems.some((item) => item.id === product.id);
     if (!isAlreadyInWishlist) {
       setWishlistItems([...wishlistItems, product]);
+      toast.success('Product added to wishlist!');
+    } else {
+      toast.info('Product already in wishlist!');
     }
   };
 
   const removeFromWishlist = (id) => {
     setWishlistItems(wishlistItems.filter((item) => item.id !== id));
-    alert('Do you want to remove!!')
+    toast.error('Product removed from wishlist!');
   };
 
   const increaseQuantity = (id) => {
@@ -71,6 +75,7 @@ export const CartProvider = ({ children }) => {
       }}
     >
       {children}
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </CartContext.Provider>
   );
 };

@@ -23,7 +23,7 @@ function ProductCarousel() {
   const { addToCart, addToWishlist } = useContext(CartContext); 
 
   return (
-    <div>
+    <div className='product-card-main'>
       <h2 style={{ textAlign: 'center' }}>Best Selling Products</h2>
       <Carousel
         responsive={responsive}
@@ -38,10 +38,10 @@ function ProductCarousel() {
             <div className="product-carousel-body">
               <h5 className="product-carousel-title">{product.name}</h5>
               <p className="product-carousel-price">{product.price}</p>
-              <button className="product-carousel-btn-primary" onClick={() => addToCart(product)}>
+              <button className="card-btn product-carousel-btn-primary" onClick={() => addToCart(product)}>
                 Add to Cart
               </button>
-              <button className="product-carousel-btn-secondary" onClick={() => addToWishlist(product)}>
+              <button className="card-btn product-carousel-btn-secondary" onClick={() => addToWishlist(product)}>
                 Add to Wishlist
               </button>
             </div>
